@@ -73,6 +73,8 @@ if(isset($_POST['vote'])){
     <meta charset="UTF-8">  
     <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"><!--online fonts-->
+<link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet"><!--online fonts-->
     
     <title>Aces Voting SoftWare 2018</title>  
 </head>  

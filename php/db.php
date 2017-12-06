@@ -37,10 +37,21 @@ class User{
     }
 
     public function vote($userid, $president, $vp_acad, $vp_admin, $gen_sec, $fin_sec, $ass_sec, $welfare, $itt, $ret, $mnt, $vybes, $prayer){
-        $sql2 = "INSERT INTO `votes` (`user_id`, `President`, `VP Acad`, `VP Admin`, `Gen Sec`, `Ass Sec`, `Fin Sec`, `ITT Head`, `RET Head`, `VYBES`, `MNT Head`, `Welfare`, `Prayer`) VALUES ('$userid', '$president', '$vp_acad', '$vp_admin', '$gen_sec', '$ass_sec', '$fin_sec', '$itt', '$ret', '$vybes', '$mnt', '$welfare', '$prayer')";
+        $sql2 = "SELECT * FROM votes WHERE user_id='$userid'";
         $result2 = mysqli_query($this->connection, $sql2);
+
+        if(mysqli_num_rows($result2) > 0){
+            echo "<script>alert ('This user has voted already'); </script>";
+            header('Location: index.php');
+        }
+        else{
+        $sql3 = "INSERT INTO `votes` (`user_id`, `President`, `VP Acad`, `VP Admin`, `Gen Sec`, `Ass Sec`, `Fin Sec`, `ITT Head`, `RET Head`, `VYBES`, `MNT Head`, `Welfare`, `Prayer`) VALUES ('$userid', '$president', '$vp_acad', '$vp_admin', '$gen_sec', '$ass_sec', '$fin_sec', '$itt', '$ret', '$vybes', '$mnt', '$welfare', '$prayer')";
+        $result3 = mysqli_query($this->connection, $sql3);
         header('Location: thankyou.php');
         return true;
+        }
+
+
 
     }
 
