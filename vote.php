@@ -135,7 +135,7 @@ if(isset($_POST['vote'])){
                         </select>  
                     </div> 
                     <div class="form-group">  
-                        Vice President Administration* <br/><select class="form-control" placeholder="Marital Status" name="vp_admin" type="email" autofocus> 
+                        Vice President Academics* <br/><select class="form-control" placeholder="Marital Status" name="vp_admin" type="email" autofocus> 
                             <option value="">Select...</option>
                             <option value="Single">Single</option>
                             <option value="Divorced">Divorced</option>
@@ -144,7 +144,7 @@ if(isset($_POST['vote'])){
                         </select> 
                     </div>   
                     <div class="form-group">  
-                        Vice President Academics* <br/><select class="form-control" placeholder="Employment status" name="vp_acad" type="" autofocus>
+                        Vice President Administration* <br/><select class="form-control" placeholder="Employment status" name="vp_acad" type="" autofocus>
                             <option value="">Select...</option>
                             <option value="Student">Student</option>
                             <option value="Entrepreneur">Entrepreneur</option>
@@ -177,14 +177,7 @@ if(isset($_POST['vote'])){
                             <option value="Widowed">Widowed</option>
                         </select> 
                     </div>    
-                    <div class="form-group">  
-                        Director of Welfare* <br/><select class="form-control" placeholder="Employment status" name="welfare" type="" autofocus>
-                            <option value="">Select...</option>
-                            <option value="Student">Student</option>
-                            <option value="Entrepreneur">Entrepreneur</option>
-                            <option value="Worker">Worker</option>
-                        </select>  
-                    </div> 
+
                     <div class="form-group">  
                         ITT Head* <br/><select class="form-control" placeholder="Marital Status" name="itt" type="email" autofocus> 
                             <option value="">Select...</option>
@@ -201,7 +194,16 @@ if(isset($_POST['vote'])){
                             <option value="Entrepreneur">Entrepreneur</option>
                             <option value="Worker">Worker</option>
                         </select>  
-                    </div> 
+                    </div>  
+                    <div class="form-group">  
+                        VYBES Head* <br/><select class="form-control" placeholder="Marital Status" name="vybes" type="email" autofocus> 
+                            <option value="">Select...</option>
+                            <option value="Single">Single</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Married">Married</option>
+                            <option value="Widowed">Widowed</option>
+                        </select> 
+                    </div>  
                     <div class="form-group">  
                         Maintenance Head* <br/><select class="form-control" placeholder="Marital Status" name="mnt" type="email" autofocus> 
                             <option value="">Select...</option>
@@ -212,14 +214,13 @@ if(isset($_POST['vote'])){
                         </select> 
                     </div>   
                     <div class="form-group">  
-                        VYBES Head* <br/><select class="form-control" placeholder="Marital Status" name="vybes" type="email" autofocus> 
+                        Director of Welfare* <br/><select class="form-control" placeholder="Employment status" name="welfare" type="" autofocus>
                             <option value="">Select...</option>
-                            <option value="Single">Single</option>
-                            <option value="Divorced">Divorced</option>
-                            <option value="Married">Married</option>
-                            <option value="Widowed">Widowed</option>
-                        </select> 
-                    </div>   
+                            <option value="Student">Student</option>
+                            <option value="Entrepreneur">Entrepreneur</option>
+                            <option value="Worker">Worker</option>
+                        </select>  
+                    </div> 
                     <div class="form-group">  
                         Prayer Cordinator* <br/><select class="form-control" placeholder="Marital Status" name="prayer" type="email" autofocus> 
                             <option value="">Select...</option>

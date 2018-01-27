@@ -50,9 +50,19 @@ class User{
         header('Location: thankyou.php');
         return true;
         }
+    }
 
-
-
+    public function admin($admin_id, $admin_pass){
+        $sql_ = "SELECT * FROM admin WHERE admin_id='$admin_id' AND admin_pass='$admin_pass'";
+        $result_ = mysqli_query($this->connection, $sql_);
+        
+        if(mysqli_num_rows($result_) > 0){
+            $_SESSION['admin_id'] = $row['admin_id'];
+            header('Location: adminindex.php');
+        }
+        else{
+            echo "<script>alert ('Invalid Admin User'); </script>";
+        }
     }
 
 
