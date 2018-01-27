@@ -57,8 +57,10 @@ class User{
         $result_ = mysqli_query($this->connection, $sql_);
         
         if(mysqli_num_rows($result_) > 0){
+            while($row = $result_->fetch_array()){
             $_SESSION['admin_id'] = $row['admin_id'];
             header('Location: adminindex.php');
+            }
         }
         else{
             echo "<script>alert ('Invalid Admin User'); </script>";

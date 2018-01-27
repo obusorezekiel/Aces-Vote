@@ -64,7 +64,7 @@ session_start();
                 <div class="panel-body">  
                     <form role="form" method="post" enctype="multipart/form-data" action="logout.php">  
                         <fieldset>
-                        <p>Thank you Number <?php echo $_SESSION['user_id'];?>  for voting for Aces Excos 2017/2018. Please do well to stay behind for the coalition of the results. Thank you</p><br/><br/>
+                        <p>Thank you Number <?php echo $_SESSION['user_id'];?>  for voting for Aces Excos 2017/2018. Please do well to stay behind for the coalition of the results. ACES loves you. God bless you. Thank you</p><br/><br/>
             
                             <input class="btn btn-lg btn-info btn-block" type="submit" value="Logout" name="logout" >  
                         </fieldset>  
