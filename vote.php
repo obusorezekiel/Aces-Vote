@@ -129,105 +129,81 @@ if(isset($_POST['vote'])){
                         <div class="form-group">  
                         President* <br/><select class="form-control" placeholder="Employment status" name="president" type="" autofocus>
                             <option value="">Select...</option>
-                            <option value="Student">Student</option>
-                            <option value="Entrepreneur">Entrepreneur</option>
-                            <option value="Worker">Worker</option>
+                            <option value="Kosisochukwu Everest Ofor">Kosisochukwu Everest Ofor </option>
                         </select>  
                     </div> 
                     <div class="form-group">  
                         Vice President Academics* <br/><select class="form-control" placeholder="Marital Status" name="vp_admin" type="email" autofocus> 
                             <option value="">Select...</option>
-                            <option value="Single">Single</option>
-                            <option value="Divorced">Divorced</option>
-                            <option value="Married">Married</option>
-                            <option value="Widowed">Widowed</option>
+                            <option value="Abeshi Peter Unimke">Abeshi Peter Unimke</option>
+                            <option value="Oghenenyerhovwo Anthony Emakuneyi">Oghenenyerhovwo Anthony Emakuneyi</option>
                         </select> 
                     </div>   
                     <div class="form-group">  
                         Vice President Administration* <br/><select class="form-control" placeholder="Employment status" name="vp_acad" type="" autofocus>
                             <option value="">Select...</option>
-                            <option value="Student">Student</option>
-                            <option value="Entrepreneur">Entrepreneur</option>
-                            <option value="Worker">Worker</option>
+                            <option value="Ipine Mercy Abbey">Ipine Mercy Abbey</option>
+                            <option value="Chekube Mellicent Meme">Chekube Mellicent Meme</option>
+                            <option value="Jude Ifebude Onah">Jude Ifebude Onah</option>
                         </select>  
                      </div> 
                     <div class="form-group">  
                         General Secretary* <br/><select class="form-control" placeholder="Marital Status" name="gen_sec" type="email" autofocus> 
                             <option value="">Select...</option>
-                            <option value="Single">Single</option>
-                            <option value="Divorced">Divorced</option>
-                            <option value="Married">Married</option>
-                            <option value="Widowed">Widowed</option>
+                            <option value="Micheal Ajah Okorocha">Micheal Ajah Okorocha</option>
+                            <option value="Jude Onah Ifebude">Jude Onah Ifebude</option>
                         </select> 
                      </div>  
                      <div class="form-group">  
                         Assistant Secretary/Treasurer* <br/><select class="form-control" placeholder="Employment status" name="ass_sec" type="" autofocus>
                             <option value="">Select...</option>
-                            <option value="Student">Student</option>
-                            <option value="Entrepreneur">Entrepreneur</option>
-                            <option value="Worker">Worker</option>
+                            <option value="Amarachi Uche Offornedo">Amarachi Uche Offornedo</option>
                         </select>  
                     </div> 
                     <div class="form-group">  
                         Financial Secretary* <br/><select class="form-control" placeholder="Marital Status" name="fin_sec" type="email" autofocus> 
                             <option value="">Select...</option>
-                            <option value="Single">Single</option>
-                            <option value="Divorced">Divorced</option>
-                            <option value="Married">Married</option>
-                            <option value="Widowed">Widowed</option>
+                            <option value="Ipine Mercy Abbey">Ipine Mercy Abbey</option>
+                            <option value="Chekube Mellicent Meme">Chekube Mellicent Meme</option>
+                            <option value="Michael Ajah Okorocha">Michael Ajah Okorocha</option>
+                            <option value="Iruoma Jennifer Onyia">Iruoma Jennifer Onyia</option>
                         </select> 
                     </div>    
 
                     <div class="form-group">  
                         ITT Head* <br/><select class="form-control" placeholder="Marital Status" name="itt" type="email" autofocus> 
                             <option value="">Select...</option>
-                            <option value="Single">Single</option>
-                            <option value="Divorced">Divorced</option>
-                            <option value="Married">Married</option>
-                            <option value="Widowed">Widowed</option>
+                            <option value="Efeoghene Isaac Ogbodu">Efeoghene Isaac Ogbodu</option>
                         </select> 
                     </div>   
                     <div class="form-group">  
                         RET Head* <br/><select class="form-control" placeholder="Employment status" name="ret" type="" autofocus>
                             <option value="">Select...</option>
-                            <option value="Student">Student</option>
-                            <option value="Entrepreneur">Entrepreneur</option>
-                            <option value="Worker">Worker</option>
+                            <option value="Abeshi Peter Unimke">Abeshi Peter Unimke</option>
                         </select>  
                     </div>  
                     <div class="form-group">  
                         VYBES Head* <br/><select class="form-control" placeholder="Marital Status" name="vybes" type="email" autofocus> 
                             <option value="">Select...</option>
-                            <option value="Single">Single</option>
-                            <option value="Divorced">Divorced</option>
-                            <option value="Married">Married</option>
-                            <option value="Widowed">Widowed</option>
+                            <option value="Oghenenyerhovwo Anthony Emakuneyi">Oghenenyerhovwo Anthony Emakuneyi</option>
                         </select> 
                     </div>  
                     <div class="form-group">  
                         Maintenance Head* <br/><select class="form-control" placeholder="Marital Status" name="mnt" type="email" autofocus> 
                             <option value="">Select...</option>
-                            <option value="Single">Single</option>
-                            <option value="Divorced">Divorced</option>
-                            <option value="Married">Married</option>
-                            <option value="Widowed">Widowed</option>
+                            <option value="No Applicant">No Applicant</option>
                         </select> 
                     </div>   
                     <div class="form-group">  
                         Director of Welfare* <br/><select class="form-control" placeholder="Employment status" name="welfare" type="" autofocus>
                             <option value="">Select...</option>
-                            <option value="Student">Student</option>
-                            <option value="Entrepreneur">Entrepreneur</option>
-                            <option value="Worker">Worker</option>
+                            <option value="No Applicant">No Applicant</option>
                         </select>  
                     </div> 
                     <div class="form-group">  
                         Prayer Cordinator* <br/><select class="form-control" placeholder="Marital Status" name="prayer" type="email" autofocus> 
                             <option value="">Select...</option>
-                            <option value="Single">Single</option>
-                            <option value="Divorced">Divorced</option>
-                            <option value="Married">Married</option>
-                            <option value="Widowed">Widowed</option>
+                            <option value="No Applicant">No Applicant</option>
                         </select> 
                     </div>   
             
