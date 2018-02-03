@@ -2,9 +2,9 @@
 
 class User{
 
-    private $host = "localhost";
-    private $username = "root";
-    private $password = "";
+    private $host = "webapp-mysqldbserver-786180ec-3837.mysql.database.azure.com";
+    private $username = "mysqldbuser@webapp-mysqldbserver-786180ec-3837";
+    private $password = "Cloud123";
     private $database = "aces";
     public $connection;
 
@@ -36,7 +36,7 @@ class User{
         }
     }
 
-    public function vote($userid, $president, $vp_acad, $vp_admin, $gen_sec, $fin_sec, $ass_sec, $welfare, $itt, $ret, $mnt, $vybes, $prayer){
+    public function vote($userid, $president, $incoming, $vp_acad, $vp_admin, $gen_sec, $fin_sec, $ass_sec, $welfare, $itt, $ret, $mnt, $vybes, $prayer){
         $sql2 = "SELECT * FROM votes WHERE user_id='$userid'";
         $result2 = mysqli_query($this->connection, $sql2);
 
@@ -45,7 +45,7 @@ class User{
             header('Location: index.php');
         }
         else{
-        $sql3 = "INSERT INTO `votes` (`user_id`, `President`, `VP Acad`, `VP Admin`, `Gen Sec`, `Ass Sec`, `Fin Sec`, `ITT Head`, `RET Head`, `VYBES`, `MNT Head`, `Welfare`, `Prayer`) VALUES ('$userid', '$president', '$vp_acad', '$vp_admin', '$gen_sec', '$ass_sec', '$fin_sec', '$itt', '$ret', '$vybes', '$mnt', '$welfare', '$prayer')";
+        $sql3 = "INSERT INTO `votes` (`user_id`, `President`, `Incoming_President`,`VP_Acad`, `VP_Admin`, `Gen_Sec`, `Ass_Sec`, `Fin_Sec`, `ITT_Head`, `RET_Head`, `VYBES`, `MNT_Head`, `Welfare`, `Prayer`) VALUES ('$userid', '$president', '$incoming', '$vp_acad', '$vp_admin', '$gen_sec', '$ass_sec', '$fin_sec', '$itt', '$ret', '$vybes', '$mnt', '$welfare', '$prayer')";
         $result3 = mysqli_query($this->connection, $sql3);
         header('Location: thankyou.php');
         return true;
@@ -68,7 +68,6 @@ class User{
     }
 
     public function results(){
-    if(isset($_POST['export'])){
         $fileName = "results";
         $sqlr = "SELECT * FROM votes";
         $resultr = mysqli_query($this->connection ,$sqlr) or die("Error");
@@ -81,27 +80,30 @@ class User{
         while($row = mysqli_fetch_array($resultr)){
             $userid = $row['user_id'];
             $president = $row['President'];
-            $vp_acad = $row['Vp Acad'];
-            $vp_admin = $row['Vp Admin'];
-            $gen_sec = $row['Gen Sec'];
-            $ass_sec = $row['Ass Sec'];
-            $fin_sec = $row['Fin Sec'];
-            $itt = $row['ITT Head'];
-            $ret = $row['RET Head'];
+            $incoming = $row['Incoming_President'];
+            $vp_acad = $row['VP_Acad'];
+            $vp_admin = $row['VP_Admin'];
+            $gen_sec = $row['Gen_Sec'];
+            $ass_sec = $row['Ass_Sec'];
+            $fin_sec = $row['Fin_Sec'];
+            $itt = $row['ITT_Head'];
+            $ret = $row['RET_Head'];
             $vybes = $row['VYBES'];
-            $mnthead = $row['MNT Head'];
+            $mnthead = $row['MNT_Head'];
             $welfare = $row['Welfare'];
             $prayer = $row['Prayer'];
 
 
-            $fdata = $fdata.$userid ."," . $president ."," . $vp_acad ."," . $vp_admin ."," . $gen_sec . "," . $ass_sec . "," . $fin_sec;
+            $fdata = $fdata.$userid ."," . $president ."," . $incoming . ",". $vp_acad ."," . $vp_admin ."," . $gen_sec . "," . $ass_sec . "," . $fin_sec. "," . $itt. "," . $ret. "," . $vybes. "," . $mnthead. "," . $welfare. "," . $prayer."\n";
     
         } 
-            fwrite($file, "Email, Phone, Game, Number " . "\n".$fdata);
+            fwrite($file, "S/N, President, Incoming President, Vp_Acad, Vp_Admin, Gen_Sec, Ass_Sec, Fin_Sec, ITT, RET, VYBES , MNTHead , Welfare , Prayer Cord " . "\n".$fdata);
             fclose($file);
-        
-    }
-}
+        }
+
+    
+ 
+    
 
 }
 

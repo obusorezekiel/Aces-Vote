@@ -7,6 +7,7 @@ if(isset($_POST['vote'])){
     
     $cxn = new User;
     $president = $_POST['president'];
+    $incoming = $_POST['incoming'];
     $vp_admin = $_POST['vp_admin'];
     $vp_acad = $_POST['vp_acad'];
     $gen_sec = $_POST['gen_sec'];
@@ -21,6 +22,9 @@ if(isset($_POST['vote'])){
 
     if(empty($president)){
         echo "<script> alert ('President Vote is required'); </script>";
+    }
+    if(empty($incoming)){
+        echo "<script> alert ('Incoming President Vote is required'); </script>";
     }
     elseif(empty($vp_admin)){
         echo "<script> alert ('VP Admin Vote is required'); </script>";
@@ -57,7 +61,7 @@ if(isset($_POST['vote'])){
     }
 
     else {
-        $cxn->vote($_SESSION['user_id'], $president, $vp_acad, $vp_admin, $gen_sec, $fin_sec, $ass_sec, $welfare, $itt, $ret, $mnt, $vybes, $prayer);        
+        $cxn->vote($_SESSION['user_id'], $president, $incoming, $vp_acad, $vp_admin, $gen_sec, $fin_sec, $ass_sec, $welfare, $itt, $ret, $mnt, $vybes, $prayer);        
     }
 
     }
@@ -126,10 +130,17 @@ if(isset($_POST['vote'])){
                     <form role="form" method="post" action="vote.php">
                         <fieldset>
              
-                        <div class="form-group">  
+                    <div class="form-group">  
                         President* <br/><select class="form-control" placeholder="Employment status" name="president" type="" autofocus>
                             <option value="">Select...</option>
                             <option value="Kosisochukwu Everest Ofor">Kosisochukwu Everest Ofor </option>
+                        </select>  
+                    </div> 
+                    <div class="form-group">  
+                       Incoming President* <br/><select class="form-control" placeholder="Employment status" name="incoming" type="" autofocus>
+                            <option value="">Select...</option>
+                            <option value="Gloria Nwokoye">Gloria Nwokoye</option>
+                            <option value="Ayeni Charles Adida">Ayeni Charles Adida </option>
                         </select>  
                     </div> 
                     <div class="form-group">  
@@ -197,7 +208,7 @@ if(isset($_POST['vote'])){
                     <div class="form-group">  
                         Director of Welfare* <br/><select class="form-control" placeholder="Employment status" name="welfare" type="" autofocus>
                             <option value="">Select...</option>
-                            <option value="No Applicant">No Applicant</option>
+                            <option value="Ogbugo Chidinma Stephanie">Ogbugo Chidinma Stephanie</option>
                         </select>  
                     </div> 
                     <div class="form-group">  
