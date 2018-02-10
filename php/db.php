@@ -2,10 +2,10 @@
 
 class User{
 
-    private $host = "webapp-mysqldbserver-786180ec-3837.mysql.database.azure.com";
-    private $username = "mysqldbuser@webapp-mysqldbserver-786180ec-3837";
-    private $password = "Cloud123";
-    private $database = "aces";
+    private $host = "";
+    private $username = "";
+    private $password = "";
+    private $database = "";
     public $connection;
 
     public function __construct(){
